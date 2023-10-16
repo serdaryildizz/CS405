@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illere gore intihar</title>
+    <style>
+        h1 {
+        font: 16px sans-serif;
+        }
+        .bar {
+        fill: #e3163b;
+        }
+
+        .bar:hover {
+        fill: darkgray;
+        }
+
+        circle:hover {
+        fill: darkgray;
+        }
+
+        .axis {
+        font: 10px sans-serif;
+        }
+
+        .axis path,
+        .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+        }
+
+        .x.axis path {
+        display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>2022 senesinde Turkiye'nin en buyuk 10 ilinde toplam intihar oranlari</h1>
+
+<svg width="960" height="500">
+	<g transform="translate(40,20)">
+	<g class="x axis" transform="translate(0,450)">
+		<path class="domain" d="M0,6V0H900V6"></path>
+        <line x1="0" x2="420" y1="0" y2="0" stroke="black" />
+	</g>
+    <g class="y axis">
+		<path class="domain" d="M-6,0H0V450H-6"></path>
+        <path class="domain" d="M420,0V450H420V0Z"></path>
+
+		<text transform="rotate(-90)" y="6" dy=".71em" style="text-anchor: end;">Sehir/Ulke Orani</text>
+        <text transform="rotate(-90)" y="425" dy=".71em" style="text-anchor: end;">Erkek/Kadin Orani</text>
+
+    </g>
+    <g class="gender-chart">
+        <path class="gender-line" fill="none" stroke="blue" stroke-width="2"></path>
+        <g class="tick-marks"></g>
+    </g>
+    
+	</g>
+</svg>
+<script src="./values.js"></script>
+</body>
+</html>
+
